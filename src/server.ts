@@ -1,13 +1,12 @@
 import express, {Request, Response} from "express"
+import routes from "./routes"
 
 
 const app = express();
 const port = 8000;
 
 
-app.get("/", (req: Request, res: Response) => {
-  res.send("Home page content")
-} )
+app.use("/", routes)
 
 
 
