@@ -10,4 +10,9 @@ const router = express_1.default.Router();
 router.get("/", HomeController_1.default.index);
 router.get("/about", HomeController_1.default.about);
 router.get("/contact", ContactController_1.default.index);
+// CRUD Routes
+router.get("/items", HomeController_1.default.getItems);
+router.post("/items", HomeController_1.default.addItem);
+router.patch("/items/:index", HomeController_1.default.updateItem);
+router.delete("/items/:index", HomeController_1.default.deletedItem);
 exports.default = router;
