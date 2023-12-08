@@ -14,5 +14,5 @@ router.get("/contact", ContactController_1.default.index);
 router.get("/items", HomeController_1.default.getItems);
 router.post("/items", HomeController_1.default.addItem);
 router.patch("/items/:index", HomeController_1.default.updateItem);
-router.delete("/items/:index", HomeController_1.default.deletedItem);
+// router.delete("/items/:index", HomeController.deletedItem);
 exports.default = router;

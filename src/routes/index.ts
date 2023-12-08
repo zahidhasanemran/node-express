@@ -13,6 +13,6 @@ router.get("/contact", ContactController.index)
 router.get("/items", HomeController.getItems);
 router.post("/items", HomeController.addItem);
 router.patch("/items/:index", HomeController.updateItem);
-router.delete("/items/:index", HomeController.deletedItem);
+// router.delete("/items/:index", HomeController.deletedItem);
 
 export default router;
