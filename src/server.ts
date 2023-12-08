@@ -1,3 +1,4 @@
+import mongoose from 'mongoose';
 import express, {Application} from "express"
 import routes from "./routes"
 
@@ -9,9 +10,19 @@ app.use(express.urlencoded({extended: true}))
 
 app.use("/", routes)
 
-app.listen(port, ()=>{
-  console.log("Application is running ")
-})
+//@ts-ignore
+mongoose.connect('mongodb+srv://nexusemran:123456780@firsttry.jezp7ok.mongodb.net/?retryWrites=true&w=majority')
+  .then(()=>{
+    app.listen(port, ()=>{
+      console.log("Application is running ")
+    })
+  })
+  .catch((err)=>{
+    console.log(err);
+    
+  })
+
+
 
 
 
